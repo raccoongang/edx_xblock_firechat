@@ -14,3 +14,15 @@ Add `firechat` to the list of advanced modules in the advanced settings of a cou
 2. Select existing or create new project
 3. Get the firebase credentials:
 ![Firebase credentials](doc/img/firebase.png)
+4. Create database
+5. Select "Realtime Database" and change rules:
+
+```JSON
+{
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+}
+```
+![Firebase credentials](doc/img/firebase_rules.png)
